@@ -25,6 +25,7 @@
                 android:id="@+id/constraint">
 
                 <ImageView
+                    android:scaleType="fitXY"
                     android:id="@+id/alarmImage"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -135,6 +136,7 @@
                 android:id="@+id/constraint2">
 
                 <ImageView
+                    android:scaleType="fitXY"
                     android:id="@+id/alarmImage2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
