@@ -5,203 +5,204 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity" >
 
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="-82dp">
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardView1"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="10dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
-            <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="10dp">
+
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mad_Practical_Alarm"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.045"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/constraint">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="20dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="10dp">
 
-                <ImageView
-                    android:scaleType="fitXY"
-                    android:id="@+id/alarmImage"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/alarm1"
-                    app:layout_constraintBottom_toTopOf="@+id/tv1"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    app:layout_constraintTop_toTopOf="@id/constraint" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Create Alarm Time"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/tv2"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    app:layout_constraintTop_toBottomOf="@id/alarmImage" />
+                    <TextView
 
-                <TextView
-                    android:id="@+id/tv2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="By pressing buttons, Alarm can be created and cancelled."
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/tv3"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    app:layout_constraintTop_toBottomOf="@id/tv1" />
+                        android:id="@+id/textView4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:text="By pressing buttons, Alarm can be created and cancelled."
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
-                <TextView
-                    android:id="@+id/tv3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="Check Current time by looking below real digital clock."
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toTopOf="@+id/tv4"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    app:layout_constraintTop_toBottomOf="@id/tv2" />
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Create Alarm Time"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.066"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
-                <TextView
-                    android:id="@+id/tv4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="1dp"
-                    android:gravity="center"
-                    android:text="11:45:17 PM Aug, 14 2023"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/createAlarmbutton"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    app:layout_constraintTop_toBottomOf="@id/tv3" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/icon"
-                    app:layout_constraintTop_toBottomOf="@id/tv4"
-                    android:src="@drawable/baseline_alarm_24"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    android:elevation="20dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginLeft="33dp"/>
 
-                <Button
-                    android:id="@+id/createAlarmbutton"
-                    android:layout_width="165dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="180dp"
-                    android:backgroundTint="#44974C"
-                    android:elevation="10dp"
-                    android:text="Create Alarm"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/constraint"
-                    app:layout_constraintStart_toStartOf="@id/constraint"
-                    app:layout_constraintTop_toBottomOf="@id/tv4" />
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="199dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/alarm1" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
+                    <TextClock
+                        android:id="@+id/textClock"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:format12Hour="hh:mm:ss a MMM dd yyyy"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.533"
 
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/cardView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/cardView1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:layout_marginHorizontal="10dp"
-            android:layout_marginTop="20dp"
-            app:cardCornerRadius="10dp"
-            app:cardElevation="10dp">
-            <androidx.constraintlayout.widget.ConstraintLayout
+                        app:layout_constraintStart_toStartOf="@+id/textView4"
+                        app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/createAlarm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:backgroundTint="#008000"
+                        android:text="Create Alarm"
+                        app:icon="@drawable/baseline_alarm_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.056"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/mcv1"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:id="@+id/constraint2">
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="20dp"
+                app:layout_constraintTop_toBottomOf="@+id/mcv">
 
-                <ImageView
-                    android:scaleType="fitXY"
-                    android:id="@+id/alarmImage2"
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="9dp"
-                    android:src="@drawable/alarm1"
-                    app:layout_constraintBottom_toTopOf="@+id/tv5"
-                    app:layout_constraintEnd_toEndOf="@id/constraint2"
-                    app:layout_constraintStart_toStartOf="@id/constraint2"
-                    app:layout_constraintTop_toTopOf="@id/constraint2" />
+                    android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp"
-                    android:gravity="center"
-                    android:text="Set Alarm Time:"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/tv6"
-                    app:layout_constraintEnd_toEndOf="@id/constraint2"
-                    app:layout_constraintStart_toStartOf="@id/constraint2"
-                    app:layout_constraintTop_toBottomOf="@id/alarmImage2" />
+                    <TextView
+                        android:id="@+id/textView4mcv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:text="By pressing buttons, Alarm can be created and cancelled."
+                        android:textSize="20sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView3mcv1" />
 
-                <TextView
-                    android:id="@+id/tv6"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="5dp"
-                    android:layout_marginBottom="1dp"
-                    android:gravity="center"
-                    android:text="11:45:00 PM"
-                    android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/cancelAlarmbutton"
-                    app:layout_constraintEnd_toEndOf="@id/constraint2"
-                    app:layout_constraintStart_toStartOf="@id/constraint2"
-                    app:layout_constraintTop_toBottomOf="@id/tv5" />
-                <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/icon2"
-                    app:layout_constraintTop_toBottomOf="@id/tv6"
-                    android:src="@drawable/baseline_alarm_24"
-                    app:layout_constraintStart_toStartOf="@id/constraint2"
-                    android:elevation="20dp"
-                    android:layout_marginTop="12dp"
-                    android:layout_marginLeft="33dp"/>
+                    <TextView
+                        android:id="@+id/textView3mcv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
 
-                <Button
-                    android:id="@+id/cancelAlarmbutton"
-                    android:layout_width="165dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginRight="180dp"
-                    android:backgroundTint="#44974C"
-                    android:elevation="10dp"
-                    android:text="Cancel Alarm"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="@id/constraint2"
-                    app:layout_constraintStart_toStartOf="@id/constraint2"
-                    app:layout_constraintTop_toBottomOf="@id/tv6" />
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="24dp"
+                        android:text="Create Alarm Time"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.066"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/imageView2mcv1" />
 
 
+                    <ImageView
+                        android:id="@+id/imageView2mcv1"
+                        android:layout_width="match_parent"
+                        android:layout_height="199dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="1.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.0"
+                        app:srcCompat="@drawable/alarm1" />
+
+                    <TextClock
+                        android:id="@+id/textClockmcv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:format12Hour="hh:mm:ss a MMM dd yyyy"
+                        android:padding="10dp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.533"
+                        app:layout_constraintStart_toStartOf="@+id/textView4mcv1"
+                        app:layout_constraintTop_toTopOf="@+id/textView4mcv1" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/createAlarmmcv1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:backgroundTint="#008000"
+                        android:text="Cancel Alarm"
+                        app:icon="@drawable/baseline_alarm_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.056"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView4mcv1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
-        </com.google.android.material.card.MaterialCardView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+

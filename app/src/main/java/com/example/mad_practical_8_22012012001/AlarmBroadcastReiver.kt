@@ -4,21 +4,22 @@ import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 
-class AlarmBroadcastReiver : BroadcastReceiver() {
-    companion object{
-        val ALARMKEY="mad"
-        val ALARM_START="morning"
-        val ALARM_STOP="sc"
-    }
+class AlarmBroadcastReceiver : BroadcastReceiver() { companion object{
+    val ALARM_KEY = "key"
+    val ALARM_START = "start"
+    val ALARM_STOP = "stop"
+}
     override fun onReceive(context: Context, intent: Intent) {
-        // This method is called when the BroadcastReceiver is receiving an Intent broadcast.
-      val data=intent.getStringExtra(ALARMKEY)
-        val intentService=Intent(context,AlarmService::class.java)
-        if(data == ALARM_START){
-            context.startService(intentService)
+// This method is called when the BroadcastReceiver is receiving an Intent broadcast.
+
+        val DATA = intent.getStringExtra(ALARM_KEY)
+        val intentservice = Intent(context,AlarmService::class.java)
+        if(DATA == ALARM_START){
+            context.startService(intentservice)
         }
-        else if(data == ALARM_STOP){
-            context.startService(intentService)
+        else{
+            context.startService(intentservice)
         }
     }
+
 }
